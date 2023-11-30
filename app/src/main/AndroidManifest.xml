@@ -16,6 +16,45 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Vatiska"
+            android:exported="false" />
+        <activity
+            android:name=".Ventilator"
+            android:exported="false" />
+        <activity
+            android:name=".Temperatura"
+            android:exported="false" />
+        <activity
+            android:name=".Kondicioner"
+            android:exported="false" />
+        <activity
+            android:name=".Svet"
+            android:exported="false" />
+        <activity
+            android:name=".AddYstroistv"
+            android:exported="false" />
+        <activity
+            android:name=".AcranYstroistv"
+            android:exported="false" />
+        <activity
+            android:name=".Profil"
+            android:exported="false" />
+        <activity
+            android:name=".AddRoom"
+            android:exported="false" />
+        <activity
+            android:name=".HomeAcran"
+            android:exported="false" />
+        <activity
+            android:name=".AddAddress"
+            android:exported="false" />
+        <activity
+            android:name=".AkranVxoda"
+            android:exported="false" />
+        <activity
+            android:name=".CreatPinkod"
+            android:exported="false" />
+        <activity
             android:name=".Rigistraishan"
             android:exported="false" />
         <activity

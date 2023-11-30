@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/grad2"
+            android:background="@color/blue"
             android:orientation="vertical">
 
             <TextView
@@ -50,7 +50,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/TextEmailAddress"
+                android:id="@+id/AvtorizashinEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -70,7 +70,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/TextPassword"
+                android:id="@+id/AvtorizashinPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -89,7 +89,7 @@
             android:orientation="vertical">
 
         <Button
-            android:id="@+id/voity"
+            android:id="@+id/buttonLog"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
