@@ -12,6 +12,11 @@ class HomeAcran : AppCompatActivity() {
 
     }
 
+    fun onProfil (view: View){
+        val intent = Intent(this, Profil::class.java)
+        startActivity(intent)
+    }
+
     fun onAdd (view: View){
         val intent = Intent(this, AddRoom::class.java)
         startActivity(intent)

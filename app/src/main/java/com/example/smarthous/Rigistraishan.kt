@@ -45,7 +45,7 @@ class Rigistraishan : AppCompatActivity() {
             val loginR = loginText.text.toString()
             val emailR = emailText.text.toString()
             val passwordR = passwordText.text.toString()
-            val intent = Intent(this, Avtorizashin::class.java)
+            val intent = Intent(this, AddAddress::class.java)
 
             try {
                 if(loginR == "" && emailR == "" && passwordR == ""){

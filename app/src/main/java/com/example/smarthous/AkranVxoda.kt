@@ -56,7 +56,7 @@ class AkranVxoda : AppCompatActivity() {
 
     fun Change_Next() {
         if (value.length == 4) {
-            val intent = Intent(this, AddAddress::class.java)
+            val intent = Intent(this, HomeAcran::class.java)
             startActivity(intent)
         }
     }

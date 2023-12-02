@@ -80,7 +80,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/TextEmailAddress"
+            android:id="@+id/EmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -125,7 +125,7 @@
             android:onClick="onSave"
             android:background="@drawable/radius3"
             app:backgroundTint="@null"
-            android:text="Войти"
+            android:text="Сохранить"
             android:textStyle="bold"/>
 
         <Button

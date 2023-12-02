@@ -35,7 +35,7 @@ class AddAddress : AppCompatActivity() {
 
         save.setOnClickListener {
             val adresD = adres.text.toString()
-            val intent = Intent(this, HomeAcran::class.java)
+            val intent = Intent(this, Avtorizashin::class.java)
 
             try{
                 if(adresD == ""){
@@ -45,7 +45,15 @@ class AddAddress : AppCompatActivity() {
                         val userId = supabase.gotrue.retrieveUserForCurrentSession(updateSession = true).id
 
                         val city = Users(id = userId, Адрес = adresD)
-                        supabase.postgrest["Пользователи"].insert(city) //returning defaults to Returning.REPRESENTATION
+                            // supabase.postgrest["Пользователи"].insert(city) //returning defaults to Returning.REPRESENTATION
+
+                        supabase.postgrest["Пользователи"].update(
+                            {
+                                set("Адрес", adresD)
+                            }
+                        ) {
+                            eq("id", userId)
+                        }
 
                         Toast.makeText(applicationContext, "Адрес указан!", Toast.LENGTH_LONG).show()
                         startActivity(intent)
