@@ -16,6 +16,7 @@ import io.github.jan.supabase.gotrue.providers.builtin.Email
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.coroutines.launch
 import org.json.JSONException
+import java.lang.Exception
 
 class Avtorizashin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,14 +24,7 @@ class Avtorizashin : AppCompatActivity() {
         setContentView(R.layout.activity_avtorizashin)
 
 
-        val supabase = createSupabaseClient(
-            supabaseUrl = "https://prldqfqaxwcsbbwjycgt.supabase.co",
-            supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBybGRxZnFheHdjc2Jid2p5Y2d0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEwNjk5OTEsImV4cCI6MjAxNjY0NTk5MX0.-NFmn1HBbtg5IPS7d6X3j5mvph_ofAMWvgxeTUuCTak"
-        ) {
-            install(GoTrue)
-            install(Postgrest)
-            //install other modules
-        }
+
 
         val emailText: EditText = findViewById(R.id.AvtorizashinEmailAddress)
         val passwordText: EditText = findViewById(R.id.AvtorizashinPassword)
@@ -46,7 +40,7 @@ class Avtorizashin : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Поля не все заполнены!", Toast.LENGTH_LONG).show()
                 } else {
                     lifecycleScope.launch {
-                        supabase.gotrue.loginWith(Email) {
+                        SB.getClient().gotrue.loginWith(Email) {
                             email = emailA
                             password = passwordA
                         }
@@ -56,7 +50,7 @@ class Avtorizashin : AppCompatActivity() {
                         startActivity(intent)
                     }
                 }
-            } catch (e: JSONException){
+            } catch (e: Exception){
                 Log.e("!!!", e.message.toString())
             }
         }
