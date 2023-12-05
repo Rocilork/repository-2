@@ -43,13 +43,14 @@
         <EditText
             android:id="@+id/editTextPostalAddress"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
+            android:layout_height="50dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edit_text"
             android:hint="Адрес"
-            android:textSize="24dp"
-            android:inputType="textPostalAddress" />
+            android:inputType="textPostalAddress"
+            android:textAllCaps="false"
+            android:textSize="24dp" />
 
         <Button
             android:id="@+id/buttonSave"

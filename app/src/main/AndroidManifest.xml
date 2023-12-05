@@ -34,7 +34,7 @@
             android:name=".AddYstroistv"
             android:exported="false" />
         <activity
-            android:name=".AcranYstroistv"
+            android:name=".test.AcranYstroistv"
             android:exported="false" />
         <activity
             android:name=".Profil"
